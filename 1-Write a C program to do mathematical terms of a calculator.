@@ -1,0 +1,73 @@
+#include<stdio.h>
+#include<math.h>
+double num1,num2,sum;
+int option;
+double Addition()
+{
+ return num1+num2;
+}
+double Subtraction()
+{
+ return num1-num2;
+}
+double Multiplication()
+{
+ return num1*num2;
+}
+double Division()
+{
+ return num1/num2;
+}
+void square()
+int main()
+{
+ printf("How Many Times You Want To Run The Calculator: ");
+ int tc;
+ scanf("%d",&tc);
+for (int i=1; i<=tc; i++)
+ {
+ printf("\n\n");
+ printf("Task No. %d Out of %d\n",i,tc);
+ printf("First Number: ");
+ scanf("%lf",&num1);
+ printf("Second Number: ");
+ scanf("%lf",&num2);
+ printf("Available Options:\n");
+ printf("1.Addition\n");
+ printf("2.Subtraction\n");
+ printf("3.Multiplication\n");
+ printf("4.Division\n");
+ printf("Enter Your Option: ");
+ scanf("%d",&option);
+if (option == 1)sum = Addition();
+ else if (option == 2)sum = Subtraction();
+ else if (option == 3)sum = Multiplication();
+ else if (option == 4)
+ {
+ if (num2 == 0)
+ {
+ printf("Math Error!!!\nCannot Divide a number by 0.\n");
+ continue;
+ }
+ sum = Division();
+ }
+ continue;
+ }
+ else if (option == 9)
+ {
+ percentage();
+ continue;
+ }
+ else if (option == 10)
+ {
+ if (num1>14 || num2>14)
+ {
+ printf("Error!!!\nNumbers are too big for this oparation\n");
+ continue;
+ }
+ sum = power();
+ }
+ printf("Answer of operation is : %.2lf\n",sum);
+ }
+ return 0;
+}
